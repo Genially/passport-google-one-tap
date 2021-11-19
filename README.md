@@ -32,7 +32,7 @@ provided to the strategy.
 The client side configuration is not covered by this plugin, you can follow
 the official [Google One Tap Guidelines](https://developers.google.com/identity/gsi/web/guides/display-google-one-tap).
 
-The client ID used in the front-end must be the same to be used in
+The client ID used in the front-end must be the same used in
 the strategy configuration and the login uri must be the same that you will configure
 in the [Authenticate Requests](#authenticate-requests) section.
 
@@ -71,7 +71,7 @@ passport.use(
     function (profile, done) {
       // Here your app code, for example:
       User.findOrCreate({ googleId: profile.id }, function (err, user) {
-        return cb(err, user);
+        return done(err, user);
       });
     }
   )
@@ -93,7 +93,7 @@ app.post(
     "google-one-tap",
     { failureRedirect: "/login" },
     (err, user) => {
-      // Do whatever you need,
+      // Do whatever you need
     }
   ),
   function (req, res) {
@@ -105,7 +105,9 @@ app.post(
 
 ## Examples
 
-TODO
+Developers using the popular [Express](http://expressjs.com/) web framework can
+refer to an [example](https://github.com/Genially/passport-google-one-tap/tree/main/example#readme)
+as a starting point for their own web applications.
 
 ## License
 

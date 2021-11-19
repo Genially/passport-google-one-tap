@@ -9,9 +9,11 @@
     "src"
   ],
   "scripts": {
+    "build": "tsc",
     "clean": "rimraf lib",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "build": "tsc",
+    "prepublishOnly": "npm run qa && npm run clean && npm run build",
+    "qa": "npm run lint",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -54,6 +56,6 @@
     "passport-strategy": "^1.0.0"
   },
   "engines": {
-    "node": ">=10"
+    "node": ">=12"
   }
 }
