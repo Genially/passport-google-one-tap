@@ -105,7 +105,9 @@ app.post(
 
 ## Examples
 
-TODO
+Developers using the popular [Express](http://expressjs.com/) web framework can
+refer to an [example](https://github.com/Genially/passport-google-one-tap/tree/main/example#readme)
+as a starting point for their own web applications.
 
 ## License
 

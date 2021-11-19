@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+
+    <% if (user) { %>
+    <h4>Hello <%= user.name %></h4>
+    <p>Email: <small><%= user.email %></small></p>
+    <p><a href="/logout" role="button" class="outline">Logout</a></p>
+    <% } else { %>
+    <div
+      id="g_id_onload"
+      data-client_id="<%= googleClientId %>"
+      data-login_uri="http://localhost:3000/callback/google-one-tap"
+    ></div>
+    <h4>You are not logged in.</h4>
+    <p>
+      The One Tap Prompt should be shown if there is an active Google session in
+      a compatible browser. More information:
+    </p>
+    <p>
+      <a
+        href="https://developers.google.com/identity/gsi/web/guides/overview"
+        role="button"
+        class="outline"
+        >https://developers.google.com/identity/gsi/web/guides/overview</a
+      >
+    </p>
+
+    <% } %>
+  </body>
+</html>
