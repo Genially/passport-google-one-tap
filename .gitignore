@@ -1,3 +1,5 @@
 node_modules/
 lib/
 .npmrc
+coverage/
+.nyc_output/

@@ -17,3 +17,9 @@ Ensure that the test suite passes by executing:
 ```bash
 npm run test
 ```
+
+Coverage reports can be generated and viewed by executing:
+
+```bash
+npm run coverage
+```

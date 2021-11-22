@@ -108,17 +108,21 @@ export class GoogleOneTapStrategy extends Strategy {
       this.success(user);
     };
 
-    void this.verifyToken(req).then((profile) => {
-      if (!profile) {
-        return this.fail("No user logged.", 401);
-      }
+    this.verifyToken(req)
+      .then((profile) => {
+        if (!profile) {
+          return this.fail("No user logged.", 401);
+        }
 
-      if (this.verify.passReqToCallback) {
-        this.verify.func(req, profile, verified);
-      } else {
-        this.verify.func(profile, verified);
-      }
-    });
+        if (this.verify.passReqToCallback) {
+          this.verify.func(req, profile, verified);
+        } else {
+          this.verify.func(profile, verified);
+        }
+      })
+      .catch((err) => {
+        this.error(err instanceof Error ? err : new Error(String(err)));
+      });
   }
 
   private isCsrfValid(req: Request): boolean {

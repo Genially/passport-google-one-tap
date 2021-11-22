@@ -1,5 +1,6 @@
 node_modules
 lib
 example
+coverage
 **/.eslintrc.js
 jest.config.js
