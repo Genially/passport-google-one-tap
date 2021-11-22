@@ -24,3 +24,8 @@ jobs:
           cache: "npm"
       - run: npm ci
       - run: npm run qa
+      - run: npm run coverage
+      - uses: codecov/codecov-action@v2
+        with:
+          files: ./coverage/cobertura-coverage.xml
+          fail_ci_if_error: false
