@@ -12,6 +12,7 @@ unobtrusively integrated into any application or framework that supports
 [![npm](https://img.shields.io/npm/v/passport-google-one-tap.svg)](https://www.npmjs.com/package/passport-google-one-tap)
 [![MIT license](https://img.shields.io/npm/l/diod)](./LICENSE)
 [![Build status](https://github.com/Genially/passport-google-one-tap/actions/workflows/qa.yml/badge.svg)](https://github.com/Genially/passport-google-one-tap/actions)
+[![codecov](https://codecov.io/gh/Genially/passport-google-one-tap/branch/main/graph/badge.svg?token=fOgYwD6XoD)](https://codecov.io/gh/Genially/passport-google-one-tap)
 
 ## Install
 
