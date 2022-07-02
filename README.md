@@ -90,6 +90,8 @@ For example, as route middleware in an [Express](http://expressjs.com/)
 application:
 
 ```javascript
+app.use(express.urlencoded({ extended: true }));
+
 app.post(
   "/auth/one-tap/callback",
   passport.authenticate(
