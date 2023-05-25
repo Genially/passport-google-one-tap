@@ -105,7 +105,7 @@ export class GoogleOneTapStrategy extends Strategy {
         return this.fail(info, 401);
       }
 
-      this.success(user);
+      this.success(user, info);
     };
 
     this.verifyToken(req)
