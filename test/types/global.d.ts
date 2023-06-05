@@ -4,7 +4,9 @@ import { Strategy } from "passport-strategy";
 
 interface ChaiPassportStrategy {
   use(strategy: Strategy): ChaiPassportStrategy;
-  success(callback: (profile: Profile) => void): ChaiPassportStrategy;
+  success(
+    callback: (profile: Profile, info?: object) => void
+  ): ChaiPassportStrategy;
   error(callback: (e: Error) => void): ChaiPassportStrategy;
   fail(
     callback: (challenge: string, status: number) => void
